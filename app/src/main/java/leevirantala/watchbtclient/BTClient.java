@@ -23,8 +23,7 @@ public class BTClient {
     private final UUID uuid = UUID.fromString("ee2133aa-b8a2-11e7-abc4-cec278b6b50a");
     
     public void SendMessage() {
-        //btDevice = getPairedDevice();
-        btDevice = BluetoothDevice
+        btDevice = getPairedDevice();
         Log.d(TAG, btDevice.getName());
         Log.d(TAG, btDevice.getAddress());
         try {
@@ -73,7 +72,7 @@ public class BTClient {
         if (pairedDevices != null) {
             for (BluetoothDevice device : pairedDevices) {
                 Log.d(TAG, "device name: " + device.getName());
-                BluetoothDevice pairedDevice = device.getAddress(74:A5:28:70:B8:5D);
+                BluetoothDevice pairedDevice = device;
                 return pairedDevice;
             }
         }
